@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { getEstoque, limpaEstoque, transacaoNoEstoque } from '../estoque.js';
+//import { getEstoque, limpaEstoque, transacaoNoEstoque } from '../estoque.js';
 
 test('Deve ter uma função getEstoque() exportada no módulo estoque', () => {
   expect(getEstoque).toBeTypeOf('function');
