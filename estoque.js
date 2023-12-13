@@ -17,3 +17,11 @@ export function getEstoque()
 {
     return structuredClone(estoque);
 }
+
+export function transacao(origem, destino, quantidade, fruta)
+{
+    if(origem === 'pomar')
+    {
+        estoque[destino][0].qtd += quantidade;
+    }
+}
