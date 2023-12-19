@@ -15,44 +15,49 @@
             <form name="entrada">
                 <fieldset>
                     <legend>Origem</legend>
-                    <label><input type="radio" name="origem" value="pomar" checked /> Pomar</label>
-                    <label><input type="radio" name="origem" value="joao" />João</label>
                     <label>
-                        <input type="radio" name="origem" value="maria" />Maria</label>
-
+                        <input type="radio" name="origem" value="pomar" checked>
+                        Pomar
+                    </label>
+                    <label>                        
+                        <input type="radio" name="origem" value="joao">
+                        João
+                    </label>
+                    <label>                        
+                        <input type="radio" name="origem" value="maria">
+                        Maria
+                    </label>
                 </fieldset>
                 <fieldset>
                     <legend>Destino</legend>
-                    <label><input type="radio" name="destino" value="pomar" checked /> Pomar</label>
-                    <label><input type="radio" name="destino" value="joao" />João</label>
                     <label>
-                        <input type="radio" name="destino" value="maria" checked/>Maria</label>
-
+                        <input type="radio" name="destino" value="pomar" checked>
+                        Pomar
+                    </label>
+                    <label>                        
+                        <input type="radio" name="destino" value="joao">
+                        João
+                    </label>
+                    <label>                        
+                        <input type="radio" name="destino" value="maria">
+                        Maria
+                    </label>
                 </fieldset>
-
-
-                <label for="ifruta">Fruta</label>
-                <select name="fruta" id="ifruta">
+                <input type="number" name="quantidade" value="1" min="0" max="12" step="1">
+                <select name="fruta">
                     <option value="maca">Maçã</option>
                     <option value="pera">Pera</option>
                     <option value="banana">Banana</option>
-                    <option value="uva">Uva</option>
                 </select>
-
-                    <label for="iqtd">Quantidade</label>
-
-                <input id="iqtd" type="number" name="quantidade"
-                min="0" max="12" step="1"/>
-                <button type="submit">Enviar</button>
+                <button type="submit" name="enviar">Enviar</button>
             </form>
         </section>
-        <section>
-            <h2>Estoque</h2>
-            <h3>João</h3>
-            <ol id="olJoao"></ol>
-            <h3>Maria</h3>
-            <ol id="olMaria"></ol>
-        </section>
+        <section id="saida">
+            <h2>João</h2>
+            <ol id="joao"></ol>
+            <h2>Maria</h2>
+            <ol id="maria"></ol>
+        </section>  
     </main>
     <button type="button" id="btnLimpaEstoque">Limpar Lista</button>
 </body>
