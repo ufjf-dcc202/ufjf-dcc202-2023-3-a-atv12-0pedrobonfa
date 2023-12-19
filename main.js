@@ -1,9 +1,17 @@
 import { getEstoque, transacao } from "./estoque.js";
 
 document.entrada.addEventListener('submit', leFormulario);
+document.entrada.reset();
 
 const olJoao = document.querySelector("#olJoao")
 const olMaria = document.querySelector("#olMaria")
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btnLimpaEstoque').addEventListener('click', () => {
+        limpaEstoque();
+        atualizaTela();
+    });
+});
 
 atualizaTela();
 
