@@ -36,15 +36,14 @@ function leFormulario(event)
         preencheListaPessoa(estoque['maria'], olMaria);
     }
 
-    function preencheListaPessoa(pessoa, lista)
-    {
-        lista.innerHTML="";;
-        olMaria.innerHTML = "";
-        for(let i = 0; i<pessoa.length; i++)
-        {
-            const monte = pessoa[i];
-            const eLi = document.createElement('li');
-            eLi.innerText = `${monte.tipo}: ${monte.qtd}`;
-            lista.append(eLi);
+    function preencheListaPessoa(lista, estoqueDaPessoa) {
+        lista.textContent = "";
+        if (Array.isArray(estoqueDaPessoa)) {
+            for (let i = 0; i < estoqueDaPessoa.length; i++) {
+                const monte = estoqueDaPessoa[i];
+                const li = document.createElement('li');
+                li.textContent = `${monte.tipo}: ${monte.quantidade}`;
+                lista.appendChild(li);
+            }
         }
     }
